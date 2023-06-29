@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { getUserProjects } from '@/lib/action'
+import { getUserProjects } from '@/lib/actions'
 import { ProjectInterface, UserProfile } from '@/common.types'
 import Image from 'next/image'
 
@@ -32,8 +32,8 @@ const RelatedProjects = async ({ userId, projectId }: Props) => {
             </div>
 
             <div className="related_projects-grid">
-                {filteredProjects?.map(({ node }: { node: ProjectInterface },index) => (
-                    <div className="flexCenter related_project-card drop-shadow-card" key={index}>
+                {filteredProjects?.map(({ node }: { node: ProjectInterface }) => (
+                    <div className="flexCenter related_project-card drop-shadow-card">
                     <Link href={`/project/${node?.id}`} className="flexCenter group relative w-full h-full">
                         <Image src={node?.image} width={414} height={314} className="w-full h-full object-cover rounded-2xl" alt="project image" />
         

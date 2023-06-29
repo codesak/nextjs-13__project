@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { NavLinks } from "@/constants";
+import { NavLinks } from "@/constant";
 import { getCurrentUser } from "@/lib/session";
 
 import AuthProviders from "./AuthProviders";
